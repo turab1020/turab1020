@@ -18,37 +18,38 @@
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td valign="top">
 
 ```python
-class TurabHaider:
-    role      = "CS Undergrad @ FAST-NUCES"
-    focus     = ["MLOps", "Machine Learning",
-                 "Full-Stack Web"]
+class Turab:
+  role = "CS @ FAST-NUCES"
+  focus = ["MLOps", "ML", "Web"]
 
-    building  = [
-        "Quality-gated synthetic data pipelines",
-        "AI vs real image detection (VisionGuard)",
-        "Student marketplaces & 3D web experiences",
-    ]
+  building = [
+    "Quality-gated data pipelines",
+    "AI vs real image detection",
+    "3D web experiences",
+  ]
 
-    learning  = ["Model serving", "Kubernetes",
-                 "System Design"]
+  learning = ["Model serving",
+              "Kubernetes",
+              "System design"]
 
-    stack = {
-        "ml":    ["TensorFlow", "Keras", "scikit-learn"],
-        "ops":   ["MLflow", "DVC", "Airflow", "Docker"],
-        "web":   ["React", "Next.js", "Tailwind", "Three.js"],
-        "data":  ["MongoDB", "Pandas", "NumPy"],
-    }
+  stack = {
+    "ml":  ["TensorFlow", "sklearn"],
+    "ops": ["MLflow", "DVC",
+            "Airflow", "Docker"],
+    "web": ["React", "Next.js",
+            "Tailwind", "Three.js"],
+  }
 
-    def say_hi(self):
-        return "Let's build something that ships 🚀"
+  def say_hi(self):
+    return "Let's ship it 🚀"
 ```
 
 </td>
-<td width="45%" valign="middle" align="center">
-  <img src="./assets/terminal.svg" alt="Animated terminal running an ML pipeline" width="100%" />
+<td valign="middle" align="center">
+  <img src="./assets/terminal.svg" alt="Animated terminal running an ML pipeline" width="380" />
 </td>
 </tr>
 </table>
