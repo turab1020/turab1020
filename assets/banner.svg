@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b1a"/>
+      <stop offset="0.55" stop-color="#0d1b3a"/>
+      <stop offset="1" stop-color="#1a0f3a"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.78" cy="0.35" r="0.45">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.12" cy="0.9" r="0.5">
+      <stop offset="0" stop-color="#0ea5e9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="0.5" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1e3a5f" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .t { font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+      .m { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
+      .edge { stroke: url(#flow); stroke-width: 2; fill: none; stroke-dasharray: 6 8; animation: dash 2.4s linear infinite; opacity: .85; }
+      @keyframes dash { to { stroke-dashoffset: -56; } }
+      .node { animation: pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .d1 { animation-delay: .4s } .d2 { animation-delay: .8s } .d3 { animation-delay: 1.2s } .d4 { animation-delay: 1.6s }
+      @keyframes pulse { 0%,100% { opacity: .75; transform: scale(1) } 50% { opacity: 1; transform: scale(1.08) } }
+      .fade { animation: fadein 1.2s ease-out both; }
+      .fade2 { animation: fadein 1.2s .5s ease-out both; }
+      .fade3 { animation: fadein 1.2s 1s ease-out both; }
+      @keyframes fadein { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+      .star { animation: twinkle 4s ease-in-out infinite; }
+      @keyframes twinkle { 0%,100% { opacity: .2 } 50% { opacity: .9 } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#grid)"/>
+  <rect width="1280" height="320" fill="url(#glow1)"/>
+  <rect width="1280" height="320" fill="url(#glow2)"/>
+
+  <!-- stars -->
+  <g fill="#e0f2fe">
+    <circle class="star" cx="90" cy="40" r="1.4"/>
+    <circle class="star" style="animation-delay:1s" cx="420" cy="28" r="1.2"/>
+    <circle class="star" style="animation-delay:2s" cx="610" cy="290" r="1.4"/>
+    <circle class="star" style="animation-delay:.5s" cx="1210" cy="290" r="1.2"/>
+    <circle class="star" style="animation-delay:1.5s" cx="560" cy="60" r="1"/>
+    <circle class="star" style="animation-delay:2.5s" cx="300" cy="300" r="1.1"/>
+    <circle class="star" style="animation-delay:3s" cx="1240" cy="36" r="1.3"/>
+  </g>
+
+  <!-- left: name block -->
+  <g class="t">
+    <text class="m fade" x="72" y="96" font-size="18" fill="#38bdf8" letter-spacing="2">&gt; hello, world. i am</text>
+    <text class="fade2" x="68" y="170" font-size="76" font-weight="800" fill="url(#name)" letter-spacing="1">Turab Haider</text>
+    <text class="fade3" x="72" y="214" font-size="22" fill="#cbd5e1" letter-spacing="0.5">MLOps &amp; Machine Learning  ·  Full-Stack Web  ·  CS @ FAST-NUCES</text>
+    <g class="fade3">
+      <rect x="72" y="238" width="148" height="30" rx="15" fill="#0ea5e9" fill-opacity="0.15" stroke="#38bdf8" stroke-opacity="0.6"/>
+      <text class="m" x="146" y="258" font-size="13" fill="#7dd3fc" text-anchor="middle">pipelines</text>
+      <rect x="230" y="238" width="148" height="30" rx="15" fill="#7c3aed" fill-opacity="0.15" stroke="#a78bfa" stroke-opacity="0.6"/>
+      <text class="m" x="304" y="258" font-size="13" fill="#c4b5fd" text-anchor="middle">models</text>
+      <rect x="388" y="238" width="148" height="30" rx="15" fill="#10b981" fill-opacity="0.15" stroke="#34d399" stroke-opacity="0.6"/>
+      <text class="m" x="462" y="258" font-size="13" fill="#6ee7b7" text-anchor="middle">products</text>
+    </g>
+  </g>
+
+  <!-- right: ML pipeline graph -->
+  <g transform="translate(800,0)">
+    <path class="edge" d="M40 160 C 90 160, 90 90, 140 90"/>
+    <path class="edge" d="M40 160 C 90 160, 90 230, 140 230"/>
+    <path class="edge" d="M196 90 C 240 90, 240 160, 270 160"/>
+    <path class="edge" d="M196 230 C 240 230, 240 160, 270 160"/>
+    <path class="edge" style="stroke:#a78bfa" d="M326 160 L 372 160"/>
+
+    <g class="node" filter="url(#soft)">
+      <circle cx="28" cy="160" r="26" fill="#0b1530" stroke="#38bdf8" stroke-width="2"/>
+    </g>
+    <g class="node d1" filter="url(#soft)">
+      <circle cx="168" cy="90" r="26" fill="#0b1530" stroke="#60a5fa" stroke-width="2"/>
+    </g>
+    <g class="node d2" filter="url(#soft)">
+      <circle cx="168" cy="230" r="26" fill="#0b1530" stroke="#818cf8" stroke-width="2"/>
+    </g>
+    <g class="node d3" filter="url(#soft)">
+      <circle cx="298" cy="160" r="26" fill="#0b1530" stroke="#a78bfa" stroke-width="2"/>
+    </g>
+    <g class="node d4" filter="url(#soft)">
+      <circle cx="400" cy="160" r="26" fill="#0b1530" stroke="#34d399" stroke-width="2"/>
+    </g>
+
+    <g class="m" font-size="11" text-anchor="middle" fill="#e2e8f0">
+      <text x="28" y="164">data</text>
+      <text x="168" y="94">dvc</text>
+      <text x="168" y="234">train</text>
+      <text x="298" y="164">mlflow</text>
+      <text x="400" y="164">ship</text>
+    </g>
+    <g class="m" font-size="11" text-anchor="middle" fill="#64748b">
+      <text x="28" y="206">ingest</text>
+      <text x="168" y="46">version</text>
+      <text x="168" y="278">tune</text>
+      <text x="298" y="206">register</text>
+      <text x="400" y="206">deploy</text>
+    </g>
+  </g>
+</svg>
