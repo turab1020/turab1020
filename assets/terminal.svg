@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="360" viewBox="0 0 440 360">
+  <defs>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#0b1022"/>
+    </linearGradient>
+    <style>
+      .m { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; font-size: 13px; }
+      .l { opacity: 0; animation: show 14s infinite; }
+      .l1 { animation-delay: .3s }  .l2 { animation-delay: .9s }  .l3 { animation-delay: 1.7s }
+      .l4 { animation-delay: 2.3s } .l5 { animation-delay: 2.9s } .l6 { animation-delay: 3.5s }
+      .l7 { animation-delay: 4.1s } .l8 { animation-delay: 4.9s } .l9 { animation-delay: 5.5s }
+      .l10 { animation-delay: 6.3s } .l11 { animation-delay: 6.9s } .l12 { animation-delay: 7.7s }
+      @keyframes show { 0% { opacity: 0 } 2% { opacity: 1 } 88% { opacity: 1 } 92%,100% { opacity: 0 } }
+      .cur { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0 } }
+      .p { fill: #34d399 } .c { fill: #e2e8f0 } .o { fill: #94a3b8 } .k { fill: #38bdf8 } .v { fill: #c4b5fd } .g { fill: #4ade80 }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="438" height="358" rx="14" fill="url(#win)" stroke="#1e293b" stroke-width="2"/>
+  <rect x="1" y="1" width="438" height="34" rx="14" fill="#111a33"/>
+  <rect x="1" y="22" width="438" height="13" fill="#111a33"/>
+  <circle cx="22" cy="18" r="6" fill="#f87171"/>
+  <circle cx="42" cy="18" r="6" fill="#fbbf24"/>
+  <circle cx="62" cy="18" r="6" fill="#4ade80"/>
+  <text x="220" y="22" text-anchor="middle" class="m o" style="font-size:12px">turab@fast: ~/synthguard-ops</text>
+
+  <g class="m" xml:space="preserve">
+    <text class="l l1" x="20" y="64"><tspan class="p">➜</tspan><tspan class="c"> whoami</tspan></text>
+    <text class="l l2" x="20" y="86"><tspan class="v">turab haider</tspan><tspan class="o"> · mlops &amp; web</tspan></text>
+
+    <text class="l l3" x="20" y="116"><tspan class="p">➜</tspan><tspan class="c"> dvc repro</tspan></text>
+    <text class="l l4" x="20" y="138"><tspan class="o">running stage </tspan><tspan class="k">'prepare'</tspan><tspan class="g">  ✓</tspan></text>
+    <text class="l l5" x="20" y="158"><tspan class="o">running stage </tspan><tspan class="k">'train'</tspan><tspan class="g">    ✓</tspan></text>
+    <text class="l l6" x="20" y="178"><tspan class="o">running stage </tspan><tspan class="k">'evaluate'</tspan><tspan class="g"> ✓</tspan></text>
+
+    <text class="l l7" x="20" y="208"><tspan class="p">➜</tspan><tspan class="c"> python gates.py --model champion</tspan></text>
+    <text class="l l8" x="20" y="230"><tspan class="o">fidelity </tspan><tspan class="g">pass</tspan><tspan class="o">  utility </tspan><tspan class="g">pass</tspan><tspan class="o">  privacy </tspan><tspan class="g">pass</tspan></text>
+    <text class="l l9" x="20" y="250"><tspan class="o">registered → </tspan><tspan class="v">mlflow://models/champion</tspan></text>
+
+    <text class="l l10" x="20" y="280"><tspan class="p">➜</tspan><tspan class="c"> git push origin main</tspan></text>
+    <text class="l l11" x="20" y="302"><tspan class="o">ci/cd </tspan><tspan class="g">● passed</tspan><tspan class="o">  ·  deployed to </tspan><tspan class="k">prod</tspan></text>
+
+    <text class="l l12" x="20" y="332"><tspan class="p">➜</tspan><tspan class="c"> </tspan><tspan class="cur c">▋</tspan></text>
+  </g>
+</svg>
